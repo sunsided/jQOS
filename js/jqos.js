@@ -39,6 +39,11 @@ $(function() {
             this.userInputDenied = false;
         };
 
+        this.clear = function() {
+            $('.console-feedback-line').remove();
+            this.beginNewLine(false);
+        };
+
         this.beginNewLine = function(isSystemFeedback) {
             // Volatile-Markierungen entfernen
             $('.console-char').removeClass('volatile');
@@ -53,7 +58,18 @@ $(function() {
             }
 
             // Element anhängen
-            $('<div class="'+cssclass+'"><div class="console-caret hi"></div></div>').insertAfter($('.console-feedback-line').last());
+            var newLine = $('<div class="'+cssclass+'"><div class="console-caret hi"></div></div>');
+
+            // inject new line
+            var existingLines = $('.console-feedback-line');
+            if (existingLines.length > 0) {
+                newLine.insertAfter(existingLines.last());
+            }
+            else {
+                $('#console').append(newLine);
+            }
+
+            // make it blinky
             $('.console-caret').blink();
         };
 
@@ -101,6 +117,27 @@ $(function() {
             return buffer;
         };
 
+        this.handleInternalCommands = function(commandBuffer) {
+            commandBuffer = commandBuffer.toLowerCase();
+            switch(commandBuffer) {
+                case "":
+                    // prevent empty commands
+                    break;
+
+                case "clear":
+                case "cls":
+                case "clc":
+                    console.log('clearing console');
+                    this.clear();
+                    break;
+                default:
+                    return true;
+            }
+
+            this.allowUserInput();
+            return false;
+        };
+
         this.returnPressed = function() {
             // TODO: Was passiert, wenn Newline nicht am Zeilenende ausgeführt wird?
 
@@ -109,6 +146,11 @@ $(function() {
 
             // Zeichen ermitteln
             var currentCommandBuffer = this.getCurrentCommandBuffer();
+
+            // check for internal commands
+            if (!this.handleInternalCommands(currentCommandBuffer)) {
+                return;
+            }
 
             // Neue Zeile im feedback-Modus erzeugen
             this.beginNewLine(true);
@@ -146,7 +188,7 @@ $(function() {
             prev.blink();
 
             // Caret ist auch ein character
-            removeCurrentCaret(caret);
+            this.removeCurrentCaret(caret);
         };
 
         this.cursorRight = function() {
@@ -180,7 +222,7 @@ $(function() {
                 if (newTarget.length > 0) {
 
                     // Aktuellen Caret abwählen
-                    removeCurrentCaret();
+                    this.removeCurrentCaret();
 
                     // Neues Ziel setzen
                     newTarget.addClass('console-caret hi');
@@ -191,7 +233,7 @@ $(function() {
                 newTarget = $('.console-char.volatile').last();
                 if (newTarget.length > 0) {
                     // Aktuellen Caret abwählen
-                    removeCurrentCaret();
+                    this.removeCurrentCaret();
 
                     next = $('<div></div>');
                     next.insertAfter(newTarget);
