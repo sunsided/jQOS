@@ -101,10 +101,15 @@ $(function() {
     $(document).bind('console-delete-pressed', function(event, direction) {
         if (direction == 0) {
             var element = $('.console-caret').prev();
-            if (element != null) element.remove();
+            if (element.length > 0) element.remove();
         }
         else {
-            alert("delete!");
+            var element = $('.console-caret');
+            if (element.hasClass('console-char')) {
+                // Caret nach rechts, dann aktuelles Zeichen löschen
+                $(document).trigger('console-cursor-right');
+                element.remove();
+            }
         }
     });
 
