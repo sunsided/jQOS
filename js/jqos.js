@@ -115,12 +115,12 @@ $(function() {
 
     // delete pressed
     $(document).bind('console-insert-pressed', function(event) {
-        alert("insert!");
+        // alert("insert!");
     });
 
     // delete pressed
     $(document).bind('console-page-pressed', function(event, direction) {
-        alert(direction == 0 ? "page up!" : "page down!");
+        // alert(direction == 0 ? "page up!" : "page down!");
     });
 
     function removeCurrentCaret(caret) {
