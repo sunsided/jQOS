@@ -1,12 +1,16 @@
 * {
-    font-family: "Bitstream Vera Sans Mono";
+    /*font-family: "Bitstream Vera Sans Mono";*/
+    font-family: 'VT323', cursive, monospace, prestige;
+    font-weight: 400;
 }
 
 #console {
     border: 1px solid black;
     width: 500px;
-    font-size: 1em;
+    font-size: 1.5em;
     overflow: hidden;
+    font-variant: proportional-width;
+    text-transform: capitalize;
 }
 
 #console-input {
@@ -19,18 +23,27 @@
     background-color: red;
 }
 
-#console-input-feedback {
+.console-feedback-line {
     font-size: 1em;
-    background-color: #eeeeee;
-    position: relative;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 1em;
 }
 
-#console-input-caret {
-    width: 0.75em;
+.console-caret, .console-char {
     height: 1em;
+    width: 1.2ex;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.console-char.volatile {
+    background-color: #eeeeee;
+}
+
+.console-caret.hi {
     background: black;
+    color: white;
+}
+
+.console-caret.lo {
+    background: white;
+    color: black;
 }
