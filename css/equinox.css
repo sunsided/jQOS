@@ -27,7 +27,7 @@ h1 {
     background-color: red;
 }
 
-.console-feedback-line {
+.console-feedback-line, .system-feedback {
     font-size: 1em;
     min-height: 1em;
 }
@@ -38,6 +38,11 @@ h1 {
     min-width: 1.2ex;
     display: inline-block;
     vertical-align: bottom;
+    color: black;
+}
+
+.system-feedback .console-char {
+    color: red;
 }
 
 .console-char.volatile {
@@ -56,4 +61,19 @@ h1 {
 
 .console-caret.lo.volatile {
     background: #eeeeee;
+}
+
+.console-feedback-line.system-feedback .console-caret.hi {
+    background: red;
+    color: white;
+}
+
+.console-feedback-line.system-feedback .console-caret.lo {
+    background: white;
+    color: red;
+}
+
+.console-feedback-line.system-feedback .console-caret.lo.volatile {
+    background: #eeeeee;
+    color: red;
 }

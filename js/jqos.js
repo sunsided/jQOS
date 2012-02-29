@@ -25,6 +25,21 @@ $(function() {
             insertCharactersBeforeCaret(character);
         };
 
+        function beginNewLine(isSystemFeedback) {
+            // Caret entfernen und neue Zeile einfügen
+            removeCurrentCaret();
+            var newLine;
+            if (!isSystemFeedback) {
+                newLine = $('<div class="console-feedback-line"><div class="console-caret hi"></div></div>');
+            }
+            else {
+                newLine = $('<div class="console-feedback-line system-feedback"><div class="console-caret hi"></div></div>');
+            }
+
+            newLine.insertAfter($('.console-feedback-line').last());
+            $('.console-caret').blink();
+        }
+
         this.returnPressed = function() {
             // TODO: Was passiert, wenn Newline nicht am Zeilenende ausgeführt wird?
 
@@ -32,9 +47,7 @@ $(function() {
             $('.console-char').removeClass('volatile');
 
             // Caret entfernen und neue Zeile einfügen
-            removeCurrentCaret();
-            $('<div class="console-feedback-line"><div class="console-caret hi"></div></div>').insertAfter($('.console-feedback-line').last());
-            $('.console-caret').blink();
+            beginNewLine(true);
         };
 
         this.deletePressed = function(direction) {
