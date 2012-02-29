@@ -41,10 +41,6 @@ h1 {
     color: black;
 }
 
-.system-feedback .console-char {
-    color: red;
-}
-
 .console-char.volatile {
     background-color: #eeeeee;
 }
@@ -61,6 +57,10 @@ h1 {
 
 .console-caret.lo.volatile {
     background: #eeeeee;
+}
+
+.system-feedback .console-char {
+    color: red;
 }
 
 .console-feedback-line.system-feedback .console-caret.hi {
