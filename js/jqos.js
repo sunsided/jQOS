@@ -88,17 +88,12 @@ $(function() {
         // Text beziehen
         var line = $('#console-input').val(); // TODO: Auswerten!
 
-        /*
-        // Text einfügen
-        $('<div class="console-feedback-line">'+line+'</div>').insertBefore('#console-caret');
-        */
-
         // Eingabe leeren
         $('#console-input').val('');
 
         // Caret entfernen und neue Zeile einfügen
         $('.console-caret').remove();
-        $('<div class="console-feedback-line"><div class="console-caret"></div></div>').insertAfter($('.console-feedback-line').last());
+        $('<div class="console-feedback-line"><div class="console-caret hi"></div></div>').insertAfter($('.console-feedback-line').last());
         $('.console-caret').blink();
     });
 
@@ -130,7 +125,24 @@ $(function() {
 
     // cursor left pressed
     $(document).bind('console-cursor-left', function(event) {
-        alert("go left!");
+        // Ermitteln, ob der Caret ein echtes Zeichen ist
+        var caret = $('.console-caret');
+
+        // Zeichen vor dem Caret ermitteln
+        var prev = caret.prev();
+        if (prev == null) return;
+
+        // Caret nach links verschieben
+        prev.addClass('console-caret hi');
+        prev.blink();
+
+        // Caret ist auch ein character
+        if (caret.hasClass('console-char')) {
+            caret.removeClass('console-caret hi lo');
+        }
+        else { // Caret ist kein character
+            caret.remove();
+        }
     });
 
     // cursor right pressed
