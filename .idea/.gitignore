@@ -1,0 +1,9 @@
+*.iws
+cssxfire.xml
+workspace.xml
+dataSources.xml
+sqlDataSources.xml
+dynamic.xml
+.project
+.classpath
+.settings
