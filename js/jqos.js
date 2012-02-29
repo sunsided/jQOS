@@ -94,7 +94,7 @@ $(function() {
         // Caret entfernen und neue Zeile einfügen
         $('.console-caret').remove();
         $('<div class="console-feedback-line"><div class="console-caret hi"></div></div>').insertAfter($('.console-feedback-line').last());
-        $('.console-caret').blink();
+        //$('.console-caret').blink();
     });
 
     // delete pressed
@@ -130,7 +130,7 @@ $(function() {
 
         // Zeichen vor dem Caret ermitteln
         var prev = caret.prev();
-        if (prev == null) return;
+        if (prev.length == 0) return;
 
         // Caret nach links verschieben
         prev.addClass('console-caret hi');
@@ -139,6 +139,7 @@ $(function() {
         // Caret ist auch ein character
         if (caret.hasClass('console-char')) {
             caret.removeClass('console-caret hi lo');
+            caret.stopBlink();
         }
         else { // Caret ist kein character
             caret.remove();
@@ -147,7 +148,27 @@ $(function() {
 
     // cursor right pressed
     $(document).bind('console-cursor-right', function(event) {
-        alert("go right!");
+        // Caret beziehen
+        var caret = $('.console-caret');
+
+        // Prüfen, ob aktueller Caret ein echter Caret ist
+        if (!caret.hasClass('console-char')) return;
+
+        // Zeichen nach dem Caret ermitteln
+        var next = caret.next();
+        if (next.length == 0) {
+            // Echten Caret erzeugen
+            next = $('<div></div>');
+            next.insertAfter(caret);
+        }
+
+        // Caret-Markierung hinzufügen
+        next.addClass('console-caret hi');
+        next.blink();
+
+        // Alte Caret-Markierung entfernen
+        caret.removeClass('console-caret hi lo');
+        caret.stopBlink();
     });
 
     // cursor up pressed
@@ -170,7 +191,7 @@ jQuery.fn.blink = function(options)
     return this.each(function()
     {
         var obj = $(this);
-        setInterval(function()
+        var intervalID = setInterval(function()
         {
             if($(obj).hasClass("hi"))
             {
@@ -181,5 +202,19 @@ jQuery.fn.blink = function(options)
                 $(obj).removeClass('lo').addClass('hi');
             }
         }, options.delay);
+        obj.data('blink-interval-id', intervalID);
+    });
+};
+
+jQuery.fn.stopBlink = function()
+{
+    return this.each(function()
+    {
+        var $obj = $(this);
+        var intervalID = $obj.data('blink-interval-id');
+        if (intervalID) {
+            clearInterval(intervalID);
+            $obj.removeData('blink-interval-id');
+        }
     });
 };
