@@ -53,3 +53,7 @@ h1 {
     background: white;
     color: black;
 }
+
+.console-caret.lo.volatile {
+    background: #eeeeee;
+}

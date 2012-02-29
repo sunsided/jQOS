@@ -199,12 +199,12 @@ $(function() {
 
     // cursor up pressed
     $(document).bind('console-cursor-up', function(event) {
-        alert("go up!");
+        // alert("go up!");
     });
 
     // cursor down pressed
     $(document).bind('console-cursor-down', function(event) {
-        alert("go down!");
+        // alert("go down!");
     });
 
 });
