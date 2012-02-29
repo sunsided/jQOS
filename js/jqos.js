@@ -8,6 +8,7 @@ $(function() {
         var code = (event.keyCode ? event.keyCode : event.which);
         var key = {left: 37, up: 38, right: 39, down: 40, enter: 13, backspace: 8, del: 46, ins: 45, home: 36, end: 35, pgup: 33, pgdn: 34 };
 
+        // Spezialtasten auswerten
         switch(code) {
             case key.left:
                 $(document).trigger('console-cursor-left');
@@ -55,11 +56,16 @@ $(function() {
             return false;
         }
 
+        // Sondertasten herausfiltern
+        if (event.which == 0) return true;
+
+        // Tastencode auswerten
         var code = (event.keyCode ? event.keyCode : event.which);
-        if (code >= 32 && code < 127) { // sanity check
+        if (code >= 32) {
             $(document).trigger('console-key-pressed', code);
             return false;
         }
+        return true;
     });
 
     /*
@@ -80,12 +86,20 @@ $(function() {
 
     // generic key pressed
     $(document).bind('console-key-pressed', function(event, code) {
-        $('#console-input').val(code + " " + String.fromCharCode(code));
+        $('#console-input').val($('#console-input').val() + String.fromCharCode(code));
     });
 
     // return pressed
     $(document).bind('console-return-pressed', function(event) {
-        alert("return!");
+
+        // Text beziehen
+        var line = $('#console-input').val();
+
+        // Text einfügen
+        $('<div>'+line+'</div>').insertBefore('#console-input-feedback');
+
+        // Eingabe leeren
+        $('#console-input').val('');
     });
 
     // delete pressed
