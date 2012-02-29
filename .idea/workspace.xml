@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e81a10d5-c640-4508-bc6a-a579e6c9c544" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jqosconsole.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jqos.js" afterPath="$PROJECT_DIR$/js/jqos.js" />
     </list>
     <ignored path="jqos.iws" />
@@ -28,7 +30,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="801" selection-end="801" vertical-scroll-proportion="-9.153846">
+            <state line="9" column="90" selection-start="613" selection-end="613" vertical-scroll-proportion="-5.8846154">
               <folding />
             </state>
           </provider>
@@ -46,7 +48,7 @@
       <file leaf-file-name="jqos.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/jqos.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="80" selection-start="2870" selection-end="2870" vertical-scroll-proportion="0.43664384">
+            <state line="212" column="7" selection-start="7029" selection-end="7029" vertical-scroll-proportion="4.7739725">
               <folding />
             </state>
           </provider>
@@ -70,8 +72,9 @@
         <option value="www.google.de/extern_js/f/CgJkZRICZGUrMEU4ACwrMFo4ACwrMA44ACwrMBc4ACwrMDw4ACwrMFE4ACwrMFk4ACwrMAo4AJoCAmNjLCswmAE4ACwrMBY4ACwrMBk4ACwrMCs4AJoCC2pzX3JlZGlyZWN0LCswQTgALCswTTgALCswTjgALCswUzgALCswVDgALCswaTgALCswbjgALCswkAE4ACwrMJIBOAAsKzCXATgALCswowE4ACwrMKcBOAAsKzC2ATgALCsw1QE4ACwrMNgBOAAsKzB0OAAsKzB9OAAsKzC6ATgALCswHTgALCswXDgALCswbzgALCswGDgALCswJjgALIACZ5ACZw/zsuWoP2Edjg.js" />
         <option value="$PROJECT_DIR$/coffee/jqos.coffee" />
         <option value="ssl.gstatic.com/webclient/js/gc/53c9f733/googleapis.client__plusone.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/equinox.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/jqosconsole.js" />
         <option value="$PROJECT_DIR$/js/jqos.js" />
       </list>
     </option>
@@ -379,7 +382,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="up/down alerts entfernt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Caret-Bug entfernt, wenn Enter nicht am Zeilenende" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -404,6 +407,7 @@
     <MESSAGE value="insert und pgup/pgdn auskommentiert" />
     <MESSAGE value="Feintuning" />
     <MESSAGE value="up/down alerts entfernt" />
+    <MESSAGE value="Caret-Bug entfernt, wenn Enter nicht am Zeilenende" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -444,9 +448,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/jqosconsole.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="801" selection-end="801" vertical-scroll-proportion="-9.153846">
+        <state line="9" column="90" selection-start="613" selection-end="613" vertical-scroll-proportion="-5.8846154">
           <folding />
         </state>
       </provider>
@@ -460,7 +471,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/jqos.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="80" selection-start="2870" selection-end="2870" vertical-scroll-proportion="0.43664384">
+        <state line="212" column="7" selection-start="7029" selection-end="7029" vertical-scroll-proportion="4.7739725">
           <folding />
         </state>
       </provider>
