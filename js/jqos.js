@@ -13,11 +13,16 @@ $(function() {
             }
         }
 
+        function insertCharactersBeforeCaret(characters) {
+            $.each(characters, function(index, value) {
+                $('<div class="console-char volatile">'+value+'</div>').insertBefore('.console-caret');
+            });
+        }
+
         this.keyPressed = function(code) {
             // Zeile zusammensetzen: Einzelnes Zeichen einfügen
             var character = String.fromCharCode(code);
-            $('<div class="console-char volatile">'+character+'</div>').insertBefore('.console-caret');
-
+            insertCharactersBeforeCaret(character);
         };
 
         this.returnPressed = function() {
