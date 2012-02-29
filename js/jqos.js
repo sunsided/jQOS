@@ -123,9 +123,43 @@ $(function() {
         alert(direction == 0 ? "page up!" : "page down!");
     });
 
+    function removeCurrentCaret(caret) {
+        caret = caret || $('.console-caret');
+        if (caret.hasClass('console-char')) {
+            caret.removeClass('console-caret hi lo');
+            caret.stopBlink();
+        }
+        else {
+            caret.remove();
+        }
+    }
+
     // delete pressed
     $(document).bind('console-jump-pressed', function(event, direction) {
-        alert(direction == 0 ? "home!" : "end!");
+        if (direction == 0) {
+            var newTarget = $('.console-char.volatile').first();
+            if (newTarget.length > 0) {
+
+                // Aktuellen Caret abwählen
+                removeCurrentCaret();
+
+                // Neues Ziel setzen
+                newTarget.addClass('console-caret hi');
+                newTarget.blink();
+            }
+        }
+        else {
+            var newTarget = $('.console-char.volatile').last();
+            if (newTarget.length > 0) {
+                // Aktuellen Caret abwählen
+                removeCurrentCaret();
+
+                next = $('<div></div>');
+                next.insertAfter(newTarget);
+                next.addClass('console-caret hi');
+                next.blink();
+            }
+        }
     });
 
     // cursor left pressed
@@ -142,13 +176,7 @@ $(function() {
         prev.blink();
 
         // Caret ist auch ein character
-        if (caret.hasClass('console-char')) {
-            caret.removeClass('console-caret hi lo');
-            caret.stopBlink();
-        }
-        else { // Caret ist kein character
-            caret.remove();
-        }
+        removeCurrentCaret(caret);
     });
 
     // cursor right pressed
