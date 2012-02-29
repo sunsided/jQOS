@@ -79,13 +79,13 @@ $(function() {
     // return pressed
     $(document).bind('console-return-pressed', function(event) {
 
-        // TODO: Newline verhindern, wenn keine Eingabe?
+        // TODO: Was passiert, wenn Newline nicht am Zeilenende ausgeführt wird?
 
         // Volatile-Markierung entfernen
         $('.console-char').removeClass('volatile');
 
         // Caret entfernen und neue Zeile einfügen
-        $('.console-caret').remove();
+        removeCurrentCaret();
         $('<div class="console-feedback-line"><div class="console-caret hi"></div></div>').insertAfter($('.console-feedback-line').last());
         $('.console-caret').blink();
     });
