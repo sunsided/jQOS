@@ -61,7 +61,7 @@ $(function() {
 
         // Tastencode auswerten
         var code = (event.keyCode ? event.keyCode : event.which);
-        if (code >= 32) {
+        if (code >= 32 && !event.ctrlKey) {
             $(document).trigger('console-key-pressed', code);
             return false;
         }
@@ -72,9 +72,6 @@ $(function() {
     $(document).bind('console-key-pressed', function(event, code) {
         var character = String.fromCharCode(code);
 
-        // Ausgabe zu Debugzwecken
-        $('#console-input').val($('#console-input').val() + character);
-
         // Zeile zusammensetzen: Einzelnes Zeichen einfügen
         $('<div class="console-char volatile">'+character+'</div>').insertBefore('.console-caret');
     });
@@ -82,19 +79,15 @@ $(function() {
     // return pressed
     $(document).bind('console-return-pressed', function(event) {
 
+        // TODO: Newline verhindern, wenn keine Eingabe?
+
         // Volatile-Markierung entfernen
         $('.console-char').removeClass('volatile');
-
-        // Text beziehen
-        var line = $('#console-input').val(); // TODO: Auswerten!
-
-        // Eingabe leeren
-        $('#console-input').val('');
 
         // Caret entfernen und neue Zeile einfügen
         $('.console-caret').remove();
         $('<div class="console-feedback-line"><div class="console-caret hi"></div></div>').insertAfter($('.console-feedback-line').last());
-        //$('.console-caret').blink();
+        $('.console-caret').blink();
     });
 
     // delete pressed
