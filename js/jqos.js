@@ -93,17 +93,27 @@ $(function() {
             });
         };
 
+        this.getCurrentCommandBuffer = function() {
+            var buffer = '';
+            $('.volatile').each(function(index, value) {
+                buffer = buffer + $(this).text();
+            });
+            return buffer;
+        };
+
         this.returnPressed = function() {
             // TODO: Was passiert, wenn Newline nicht am Zeilenende ausgeführt wird?
 
             // Benutzereingaben verhindern
             this.denyUserInput();
 
+            // Zeichen ermitteln
+            var currentCommandBuffer = this.getCurrentCommandBuffer();
+
             // Neue Zeile im feedback-Modus erzeugen
             this.beginNewLine(true);
 
             // Befehl absenden
-            var currentCommandBuffer = "frobnik"; // TODO: Text auswerten
             this.sendCommandToServer(currentCommandBuffer);
         };
 
