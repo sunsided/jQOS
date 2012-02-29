@@ -2,7 +2,9 @@ $(function() {
 
     function JQOSConsole() {
 
-        function removeCurrentCaret(caret) {
+        this.userInputDenied = false;
+
+        this.removeCurrentCaret = function(caret) {
             caret = caret || $('.console-caret');
             if (caret.hasClass('console-char')) {
                 caret.removeClass('console-caret hi lo');
@@ -11,43 +13,98 @@ $(function() {
             else {
                 caret.remove();
             }
-        }
+        };
 
-        function insertCharactersBeforeCaret(characters) {
+        this.insertCharactersBeforeCaret = function(characters) {
             $.each(characters, function(index, value) {
                 $('<div class="console-char volatile">'+value+'</div>').insertBefore('.console-caret');
             });
-        }
+        };
 
         this.keyPressed = function(code) {
             // Zeile zusammensetzen: Einzelnes Zeichen einfügen
             var character = String.fromCharCode(code);
-            insertCharactersBeforeCaret(character);
+            this.insertCharactersBeforeCaret(character);
         };
 
-        function beginNewLine(isSystemFeedback) {
-            // Caret entfernen und neue Zeile einfügen
-            removeCurrentCaret();
-            var newLine;
-            if (!isSystemFeedback) {
-                newLine = $('<div class="console-feedback-line"><div class="console-caret hi"></div></div>');
-            }
-            else {
-                newLine = $('<div class="console-feedback-line system-feedback"><div class="console-caret hi"></div></div>');
+        this.isUserInputDenied = function() {
+            return this.userInputDenied;
+        };
+
+        this.denyUserInput = function() {
+            this.userInputDenied = true;
+        };
+
+        this.allowUserInput = function() {
+            this.userInputDenied = false;
+        };
+
+        this.beginNewLine = function(isSystemFeedback) {
+            // Volatile-Markierungen entfernen
+            $('.console-char').removeClass('volatile');
+
+            // Caret entfernen
+            this.removeCurrentCaret();
+
+            // Neue Zeile beginnen
+            var cssclass = "console-feedback-line";
+            if (isSystemFeedback) {
+                cssclass = cssclass + " system-feedback";
             }
 
-            newLine.insertAfter($('.console-feedback-line').last());
+            // Element anhängen
+            $('<div class="'+cssclass+'"><div class="console-caret hi"></div></div>').insertAfter($('.console-feedback-line').last());
             $('.console-caret').blink();
-        }
+        };
+
+        this.systemCommandFeedbackReceived = function(data) {
+            // Systemfeedback ausgeben
+            this.insertCharactersBeforeCaret(data.message);
+
+            // Neue Zeile beginnen
+            this.beginNewLine(false);
+
+            // Benutzereingaben erlauben
+            this.allowUserInput();
+        };
+
+        this.sendCommandToServer = function(commandBuffer) {
+
+            // TODO: Doppelslashes vermeiden!
+            var serverurl = window.location.pathname + '/server.php';
+            console.log(serverurl);
+
+            var obj = this;
+            $.ajax({
+                url: serverurl,
+                type: 'GET',
+                data: {"command": commandBuffer},
+                dataType: 'json',
+                beforeSend: function( xhr ) {
+                    // xhr.overrideMimeType( 'text/plain; charset=x-user-defined' );
+                },
+                success: function( data, textStatus, jqXHR ) {
+                    // data = jQuery.parseJSON(data);
+                    obj.systemCommandFeedbackReceived(data);
+                },
+                error: function( jqXHR, textStatus, errorThrown ) {
+                    obj.systemCommandFeedbackReceived("SYSTEM ERROR: " + textStatus);
+                }
+            });
+        };
 
         this.returnPressed = function() {
             // TODO: Was passiert, wenn Newline nicht am Zeilenende ausgeführt wird?
 
-            // Volatile-Markierung entfernen
-            $('.console-char').removeClass('volatile');
+            // Benutzereingaben verhindern
+            this.denyUserInput();
 
-            // Caret entfernen und neue Zeile einfügen
-            beginNewLine(true);
+            // Neue Zeile im feedback-Modus erzeugen
+            this.beginNewLine(true);
+
+            // Befehl absenden
+            var currentCommandBuffer = "frobnik"; // TODO: Text auswerten
+            this.sendCommandToServer(currentCommandBuffer);
         };
 
         this.deletePressed = function(direction) {
@@ -135,7 +192,7 @@ $(function() {
         }
     }
 
-    var console = new JQOSConsole();
+    var con = new JQOSConsole();
 
     // Caret blinken lassen
     $('.console-caret').blink();
@@ -207,17 +264,17 @@ $(function() {
 
     // generic key pressed
     $(document).bind('console-key-pressed', function(event, code) {
-        console.keyPressed(code);
+        if (!con.isUserInputDenied()) con.keyPressed(code);
     });
 
     // return pressed
     $(document).bind('console-return-pressed', function () {
-        console.returnPressed();
+        if (!con.isUserInputDenied()) con.returnPressed();
     });
 
     // delete pressed
     $(document).bind('console-delete-pressed', function(event, direction) {
-        console.deletePressed(direction);
+        if (!con.isUserInputDenied()) con.deletePressed(direction);
     });
 
     // delete pressed
@@ -232,17 +289,17 @@ $(function() {
 
     // delete pressed
     $(document).bind('console-jump-pressed', function(direction) {
-        console.jumpPressed(direction);
+        if (!con.isUserInputDenied()) con.jumpPressed(direction);
     });
 
     // cursor left pressed
     $(document).bind('console-cursor-left', function () {
-        console.cursorLeft();
+        if (!con.isUserInputDenied()) con.cursorLeft();
     });
 
     // cursor right pressed
     $(document).bind('console-cursor-right', function () {
-        console.cursorRight();
+        if (!con.isUserInputDenied()) con.cursorRight();
     });
 
     // cursor up pressed

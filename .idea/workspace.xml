@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e81a10d5-c640-4508-bc6a-a579e6c9c544" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jqosconsole.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jqos.js" afterPath="$PROJECT_DIR$/js/jqos.js" />
     </list>
     <ignored path="jqos.iws" />
@@ -39,7 +38,7 @@
       <file leaf-file-name="equinox.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/equinox.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="14" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0">
+            <state line="62" column="15" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -48,7 +47,7 @@
       <file leaf-file-name="jqos.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/jqos.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="212" column="7" selection-start="7029" selection-end="7029" vertical-scroll-proportion="4.7739725">
+            <state line="80" column="49" selection-start="2543" selection-end="2543" vertical-scroll-proportion="0.32020548">
               <folding />
             </state>
           </provider>
@@ -72,9 +71,10 @@
         <option value="www.google.de/extern_js/f/CgJkZRICZGUrMEU4ACwrMFo4ACwrMA44ACwrMBc4ACwrMDw4ACwrMFE4ACwrMFk4ACwrMAo4AJoCAmNjLCswmAE4ACwrMBY4ACwrMBk4ACwrMCs4AJoCC2pzX3JlZGlyZWN0LCswQTgALCswTTgALCswTjgALCswUzgALCswVDgALCswaTgALCswbjgALCswkAE4ACwrMJIBOAAsKzCXATgALCswowE4ACwrMKcBOAAsKzC2ATgALCsw1QE4ACwrMNgBOAAsKzB0OAAsKzB9OAAsKzC6ATgALCswHTgALCswXDgALCswbzgALCswGDgALCswJjgALIACZ5ACZw/zsuWoP2Edjg.js" />
         <option value="$PROJECT_DIR$/coffee/jqos.coffee" />
         <option value="ssl.gstatic.com/webclient/js/gc/53c9f733/googleapis.client__plusone.js" />
-        <option value="$PROJECT_DIR$/css/equinox.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/jqosconsole.js" />
+        <option value="$PROJECT_DIR$/js/jquery-1.7.1.js" />
+        <option value="$PROJECT_DIR$/css/equinox.css" />
         <option value="$PROJECT_DIR$/js/jqos.js" />
       </list>
     </option>
@@ -196,7 +196,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="xslt.associations" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="DefaultHtmlFileTemplate" value="Html" />
@@ -331,7 +331,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39977974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -382,7 +382,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Caret-Bug entfernt, wenn Enter nicht am Zeilenende" />
+    <option name="LAST_COMMIT_MESSAGE" value="Farben näher zusammengerückt" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -408,6 +408,10 @@
     <MESSAGE value="Feintuning" />
     <MESSAGE value="up/down alerts entfernt" />
     <MESSAGE value="Caret-Bug entfernt, wenn Enter nicht am Zeilenende" />
+    <MESSAGE value="Schritt in Richtung Objektorientierung" />
+    <MESSAGE value="Extraktion der Zeichen-Setz-Funktion" />
+    <MESSAGE value="System-Feedback-Zeile vorbereitet" />
+    <MESSAGE value="Farben näher zusammengerückt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -441,13 +445,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery-1.7.1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="390" column="12" selection-start="9990" selection-end="10008" vertical-scroll-proportion="-0.44942528">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/jqosconsole.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -462,16 +459,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery-1.7.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="395" column="9" selection-start="10088" selection-end="10088" vertical-scroll-proportion="3.9649737">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/equinox.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="14" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0">
+        <state line="62" column="15" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/jqos.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="212" column="7" selection-start="7029" selection-end="7029" vertical-scroll-proportion="4.7739725">
+        <state line="80" column="49" selection-start="2543" selection-end="2543" vertical-scroll-proportion="0.32020548">
           <folding />
         </state>
       </provider>
