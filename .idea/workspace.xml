@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e81a10d5-c640-4508-bc6a-a579e6c9c544" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/sunside.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/equinox.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jqos.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jqos.js" afterPath="$PROJECT_DIR$/js/jqos.js" />
     </list>
     <ignored path="jqos.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,7 +28,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="106" selection-start="347" selection-end="347" vertical-scroll-proportion="-3.9230769">
+            <state line="19" column="10" selection-start="893" selection-end="893" vertical-scroll-proportion="-12.423077">
               <folding />
             </state>
           </provider>
@@ -42,7 +37,7 @@
       <file leaf-file-name="equinox.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/equinox.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="17" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
+            <state line="16" column="16" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -51,16 +46,7 @@
       <file leaf-file-name="jqos.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/jqos.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="29" selection-start="2573" selection-end="2573" vertical-scroll-proportion="0.6353341">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery-1.7.1.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/jquery-1.7.1.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5107" column="0" selection-start="136182" selection-end="136248" vertical-scroll-proportion="0.0">
+            <state line="69" column="0" selection-start="2373" selection-end="2373" vertical-scroll-proportion="-0.33904108">
               <folding />
             </state>
           </provider>
@@ -84,8 +70,8 @@
         <option value="www.google.de/extern_js/f/CgJkZRICZGUrMEU4ACwrMFo4ACwrMA44ACwrMBc4ACwrMDw4ACwrMFE4ACwrMFk4ACwrMAo4AJoCAmNjLCswmAE4ACwrMBY4ACwrMBk4ACwrMCs4AJoCC2pzX3JlZGlyZWN0LCswQTgALCswTTgALCswTjgALCswUzgALCswVDgALCswaTgALCswbjgALCswkAE4ACwrMJIBOAAsKzCXATgALCswowE4ACwrMKcBOAAsKzC2ATgALCsw1QE4ACwrMNgBOAAsKzB0OAAsKzB9OAAsKzC6ATgALCswHTgALCswXDgALCswbzgALCswGDgALCswJjgALIACZ5ACZw/zsuWoP2Edjg.js" />
         <option value="$PROJECT_DIR$/coffee/jqos.coffee" />
         <option value="ssl.gstatic.com/webclient/js/gc/53c9f733/googleapis.client__plusone.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/equinox.css" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/jqos.js" />
       </list>
     </option>
@@ -231,6 +217,7 @@
       <JSRemoteDebuggerConfigurationSettings>
         <option name="engineId" value="firefox" />
         <option name="fileUrl" value="http://localhost/jqos/index.html" />
+        <mapping local-file="$PROJECT_DIR$/js/jqos.js" url="http://localhost/jqos/js/jqos.js" />
       </JSRemoteDebuggerConfigurationSettings>
       <RunnerSettings RunnerId="JavascriptDebugRunner" />
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
@@ -314,20 +301,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.60022026" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39977974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.60022026" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2676282" sideWeight="0.60022026" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39977974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26923078" sideWeight="0.67070484" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -371,7 +359,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Eingabe wird übernommen bei Enter" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -384,6 +372,8 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="Eingabe wird übernommen bei Enter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -419,28 +409,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/equinox.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="17" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery-1.7.1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5107" column="0" selection-start="136182" selection-end="136248" vertical-scroll-proportion="0.0">
+        <state line="16" column="16" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="106" selection-start="347" selection-end="347" vertical-scroll-proportion="-3.9230769">
+        <state line="19" column="10" selection-start="893" selection-end="893" vertical-scroll-proportion="-12.423077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery-1.7.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5115" column="63" selection-start="136463" selection-end="136463" vertical-scroll-proportion="0.5341506">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/jqos.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="29" selection-start="2573" selection-end="2573" vertical-scroll-proportion="0.6353341">
+        <state line="69" column="0" selection-start="2373" selection-end="2373" vertical-scroll-proportion="-0.33904108">
           <folding />
         </state>
       </provider>

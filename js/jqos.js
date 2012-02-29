@@ -68,22 +68,6 @@ $(function() {
         return true;
     });
 
-    /*
-    $('#console-input').keypress(function(event) {
-        // Text beziehen
-        var line = $('#console-input').val();
-
-        if ( event.which == 13 ) {
-            event.preventDefault();
-
-            // Text einfügen
-            $('<div>'+line+'</div>').insertBefore('#console-input-feedback');
-
-            // Eingabe leeren
-            $('#console-input').val('');
-        }
-    });*/
-
     // generic key pressed
     $(document).bind('console-key-pressed', function(event, code) {
         $('#console-input').val($('#console-input').val() + String.fromCharCode(code));
