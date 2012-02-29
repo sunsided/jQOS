@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e81a10d5-c640-4508-bc6a-a579e6c9c544" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jqos.js" afterPath="$PROJECT_DIR$/js/jqos.js" />
-    </list>
+    <list default="true" id="e81a10d5-c640-4508-bc6a-a579e6c9c544" name="Default" comment="" />
     <ignored path="jqos.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,7 +43,7 @@
       <file leaf-file-name="jqos.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/jqos.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="49" selection-start="2543" selection-end="2543" vertical-scroll-proportion="0.32020548">
+            <state line="98" column="49" selection-start="3312" selection-end="3312" vertical-scroll-proportion="0.67979455">
               <folding />
             </state>
           </provider>
@@ -382,7 +378,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Farben näher zusammengerückt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exemplarische Kommandos date und meow hinzugefügt" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -412,6 +408,8 @@
     <MESSAGE value="Extraktion der Zeichen-Setz-Funktion" />
     <MESSAGE value="System-Feedback-Zeile vorbereitet" />
     <MESSAGE value="Farben näher zusammengerückt" />
+    <MESSAGE value="Erste Interaktionen zwischen Webseite und Server" />
+    <MESSAGE value="Exemplarische Kommandos date und meow hinzugefügt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -452,16 +450,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/jquery-1.7.1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="90" selection-start="613" selection-end="613" vertical-scroll-proportion="-5.8846154">
+        <state line="395" column="9" selection-start="10088" selection-end="10088" vertical-scroll-proportion="3.9649737">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery-1.7.1.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="395" column="9" selection-start="10088" selection-end="10088" vertical-scroll-proportion="3.9649737">
+        <state line="9" column="90" selection-start="613" selection-end="613" vertical-scroll-proportion="-5.8846154">
           <folding />
         </state>
       </provider>
@@ -475,7 +473,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/jqos.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="49" selection-start="2543" selection-end="2543" vertical-scroll-proportion="0.32020548">
+        <state line="98" column="49" selection-start="3312" selection-end="3312" vertical-scroll-proportion="0.67979455">
           <folding />
         </state>
       </provider>
